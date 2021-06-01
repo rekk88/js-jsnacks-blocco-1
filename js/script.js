@@ -28,15 +28,28 @@
 //     numbers[i]=Math.floor(prompt("inserisci un numero : "));
 // }
 // console.log(numbers);
-
 var numero=0;
 var somma=0;
 
-for(let i=0 ; i<5 ; i++){
+var i=0 //NOTA : CONTATORE RIUTILIZZATO PER ES 2,3 E 4
+
+//versione con for()
+// for(i=0 ; i<5 ; i++){
+//     numero = Math.floor(prompt("inserisci un numero : "));
+//     somma += numero;
+//     if(numero % 2 == 0){
+//         document.getElementById("pari").innerHTML += " "+ numero + " ";
+//     }
+// }
+// document.getElementById("output").innerHTML= "la somma è : " + somma;
+
+//versione con while
+while(i < 5){
     numero = Math.floor(prompt("inserisci un numero : "));
     somma += numero;
     if(numero % 2 == 0){
-        document.getElementById("pari").innerHTML += " "+ numero + " ";
+     document.getElementById("pari").innerHTML += " "+ numero + " ";
     }
+    i++;
 }
 document.getElementById("output").innerHTML= "la somma è : " + somma;
