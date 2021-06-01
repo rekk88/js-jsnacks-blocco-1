@@ -28,8 +28,8 @@
 //     numbers[i]=Math.floor(prompt("inserisci un numero : "));
 // }
 // console.log(numbers);
-var numero=0;
-var somma=0;
+// var numero=0;
+// var somma=0;
 
 var i=0 //NOTA : CONTATORE RIUTILIZZATO PER ES 2,3 E 4
 
@@ -44,12 +44,28 @@ var i=0 //NOTA : CONTATORE RIUTILIZZATO PER ES 2,3 E 4
 // document.getElementById("output").innerHTML= "la somma è : " + somma;
 
 //versione con while
-while(i < 5){
-    numero = Math.floor(prompt("inserisci un numero : "));
-    somma += numero;
-    if(numero % 2 == 0){
-     document.getElementById("pari").innerHTML += " "+ numero + " ";
+// while(i < 5){
+//     numero = Math.floor(prompt("inserisci un numero : "));
+//     somma += numero;
+//     if(numero % 2 == 0){
+//      document.getElementById("pari").innerHTML += " "+ numero + " ";
+//     }
+//     i++;
+// }
+// document.getElementById("output").innerHTML= "la somma è : " + somma;
+
+
+//---------------ES 3------------------------
+
+
+
+var numbers = [];
+var input=0;
+for(i=0 ; i<6 ; i++){
+    input = Math.floor(prompt("inserisci un numero : "));
+    console.log(input);
+    if(input % 2 != 0){
+        numbers.push(input);
     }
-    i++;
 }
-document.getElementById("output").innerHTML= "la somma è : " + somma;
+document.getElementById("output").innerHTML= "array numeri dispari " + numbers;
