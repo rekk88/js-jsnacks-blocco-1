@@ -23,11 +23,6 @@
 
 //---------------ES 2------------------------
 
-// var numbers = [];
-// for(let i=0 ; i<6 ; i++){
-//     numbers[i]=Math.floor(prompt("inserisci un numero : "));
-// }
-// console.log(numbers);
 // var numero=0;
 // var somma=0;
 
@@ -59,13 +54,36 @@ var i=0 //NOTA : CONTATORE RIUTILIZZATO PER ES 2,3 E 4
 
 
 
-var numbers = [];
-var input=0;
-for(i=0 ; i<6 ; i++){
-    input = Math.floor(prompt("inserisci un numero : "));
-    console.log(input);
-    if(input % 2 != 0){
-        numbers.push(input);
+// var numbers = [];
+// var input=0;
+// for(i=0 ; i<6 ; i++){
+//     input = Math.floor(prompt("inserisci un numero : "));
+//     console.log(input);
+//     if(input % 2 != 0){
+//         numbers.push(input);
+//     }
+// }
+// document.getElementById("output").innerHTML= "array numeri dispari " + numbers;
+
+
+//---------------ES 4------------------------
+
+var invitati=["franco","giulia","pippo","nuovoVicino","verde","gianni"];
+var nome = prompt("scrivi il tuo nooome : ");
+nome = nome.toLowerCase();
+console.log(nome);
+
+var trovato=false;
+
+for(i=0 ; i < invitati.length ; i++ ){
+    if(invitati[i] == nome){
+        trovato = true;
     }
 }
-document.getElementById("output").innerHTML= "array numeri dispari " + numbers;
+
+if(trovato == true){
+    document.getElementById("output").innerHTML="avanti avanti";
+}
+else{
+    document.getElementById("output").innerHTML="non sei in lista.....eh voleviiiiiii";
+}
